@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strings"
 	"time"
 
 	"github.com/turnage/graw"
@@ -15,7 +14,7 @@ type BorrowBot struct {
 
 func (r *BorrowBot) Post(p *reddit.Post) error {
 	fmt.Println(fmt.Sprintf("Examining post title: %s", p.Title))
-	if strings.Contains(p.Title, "$") && strings.Contains(p.Title, "REQ") {
+	if parsers.shouldConsider(p.Title) {
 		fmt.Println(fmt.Sprintf("processed post with title %s at link %s", p.Title, p.Permalink))
 	}
 	return nil
