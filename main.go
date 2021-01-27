@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/jsking216/reddit-borrow-filter/parsers"
 	"github.com/turnage/graw"
 	"github.com/turnage/graw/reddit"
 )
@@ -12,9 +13,10 @@ type BorrowBot struct {
 	bot reddit.Bot
 }
 
+// Post - analyze posts
 func (r *BorrowBot) Post(p *reddit.Post) error {
 	fmt.Println(fmt.Sprintf("Examining post title: %s", p.Title))
-	if parsers.shouldConsider(p.Title) {
+	if parsers.ShouldConsider(p.Title) {
 		fmt.Println(fmt.Sprintf("processed post with title %s at link %s", p.Title, p.Permalink))
 	}
 	return nil

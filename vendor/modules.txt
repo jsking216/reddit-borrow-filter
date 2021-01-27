@@ -1,8 +1,16 @@
 # github.com/golang/protobuf v1.3.2
 github.com/golang/protobuf/proto
+# github.com/google/go-cmp v0.5.4
+## explicit
+github.com/google/go-cmp/cmp
+github.com/google/go-cmp/cmp/internal/diff
+github.com/google/go-cmp/cmp/internal/flags
+github.com/google/go-cmp/cmp/internal/function
+github.com/google/go-cmp/cmp/internal/value
 # github.com/mitchellh/mapstructure v1.1.2
 github.com/mitchellh/mapstructure
-# github.com/turnage/graw v0.0.0-20200404033202-65715eea1cd0
+# github.com/turnage/graw v0.0.0-20201204201853-a177df1b5c91
+## explicit
 github.com/turnage/graw
 github.com/turnage/graw/botfaces
 github.com/turnage/graw/reddit

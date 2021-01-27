@@ -5,7 +5,7 @@ import (
 )
 
 func isRequest(title string) bool {
-	return strings.Contains(title, "REQ")
+	return strings.Contains(title, "REQ") && !strings.Contains(strings.ToLower(title), "ARRANGED")
 }
 
 func isUSD(title string) bool {
